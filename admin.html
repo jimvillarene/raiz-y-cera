@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raíz y Cera | Panel de Administración CMS</title>
+  <link rel="stylesheet" href="assets/css/admin.css" />
+</head>
+<body class="admin-body">
+
+  <!-- WordPress Style Sidebar -->
+  <aside class="admin-sidebar">
+    <div class="admin-sidebar-header">
+      <div class="admin-brand-title">RAÍZ Y CERA</div>
+      <div class="admin-brand-subtitle">Panel CMS Estilo WordPress · v1.0</div>
+    </div>
+
+    <ul class="admin-nav-list">
+      <li>
+        <button type="button" class="admin-nav-item is-active" data-tab="dashboard">
+          <span>📊</span> Escritorio
+        </button>
+      </li>
+      <li>
+        <button type="button" class="admin-nav-item" data-tab="carousel">
+          <span>🖼️</span> Carruseles & Banners
+        </button>
+      </li>
+      <li>
+        <button type="button" class="admin-nav-item" data-tab="products">
+          <span>🕯️</span> Productos & Precios
+        </button>
+      </li>
+      <li>
+        <button type="button" class="admin-nav-item" data-tab="fragrances">
+          <span>🌸</span> Biblioteca de Aromas
+        </button>
+      </li>
+      <li>
+        <button type="button" class="admin-nav-item" data-tab="blog">
+          <span>✍️</span> Entradas & Guías
+        </button>
+      </li>
+      <li>
+        <button type="button" class="admin-nav-item" data-tab="settings">
+          <span>⚙️</span> Ajustes & Envíos
+        </button>
+      </li>
+      <li>
+        <button type="button" class="admin-nav-item" data-tab="integrations">
+          <span>🔌</span> Stripe, Shopify & Etsy
+        </button>
+      </li>
+    </ul>
+
+    <div class="admin-sidebar-footer">
+      <a href="index.html" class="btn-sidebar-store" target="_blank">
+        <span>🏪</span> Ver Tienda en Vivo ↗
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Viewport -->
+  <div class="admin-main">
+    <header class="admin-topbar">
+      <div class="admin-topbar-title">
+        <h2>Administrador de Contenidos — Raíz y Cera</h2>
+      </div>
+      <div class="admin-topbar-actions">
+        <button type="button" class="btn btn-outline" id="btn-export-shopify-csv" title="Descargar CSV para importar en Shopify">
+          🛍️ Exportar Shopify CSV
+        </button>
+        <button type="button" class="btn btn-outline" id="btn-export-etsy-csv" title="Descargar CSV para importar en Etsy">
+          🧡 Exportar Etsy CSV
+        </button>
+        <button type="button" class="btn btn-outline" id="btn-admin-export-json" title="Descargar copia de cms_store.json para GitHub Pages">
+          💾 Descargar JSON para GitHub
+        </button>
+        <button type="button" class="btn btn-primary" id="btn-admin-save-all">
+          ✓ Guardar Cambios
+        </button>
+      </div>
+    </header>
+
+    <div class="admin-content-area">
+      <!-- 1. TAB: DASHBOARD -->
+      <section class="admin-tab-pane" id="tab-dashboard">
+        <div class="admin-metrics-grid">
+          <div class="metric-card">
+            <h4>Total Productos</h4>
+            <div class="metric-value" id="metric-products-count">17</div>
+          </div>
+          <div class="metric-card" style="border-left-color: #2271b1;">
+            <h4>Aromas & Pirámides</h4>
+            <div class="metric-value" id="metric-fragrances-count">11</div>
+          </div>
+          <div class="metric-card" style="border-left-color: #9C7A44;">
+            <h4>Colecciones Activas</h4>
+            <div class="metric-value" id="metric-collections-count">3</div>
+          </div>
+          <div class="metric-card" style="border-left-color: #00a32a;">
+            <h4>Envío Gratis Desde</h4>
+            <div class="metric-value" id="metric-free-shipping">$600 MXN</div>
+          </div>
+        </div>
+
+        <div class="admin-card">
+          <div class="slide-card-header">
+            <h3>Resumen Rápido de Catálogo</h3>
+            <button type="button" class="btn btn-outline btn-sm" id="btn-admin-reset-seed">
+              ↺ Restablecer Datos de Fábrica
+            </button>
+          </div>
+          <div id="dashboard-products-summary">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <div class="admin-card">
+          <h3>Guía para Publicar en GitHub Pages y Hosting de Paga</h3>
+          <p style="margin-top: 0.5rem; line-height: 1.6;">
+            <strong>Modo Gratuito (GitHub Pages):</strong> Cualquier cambio que realices aquí se almacena inmediatamente en tu navegador. Para publicar los cambios de forma definitiva para tu clienta, pulsa el botón superior <strong>"Descargar JSON para GitHub"</strong>, reemplaza el archivo <code>data/cms_store.json</code> en tu repositorio local y haz un <code>git commit & push</code>.<br/><br/>
+            <strong>Modo Hosting de Paga:</strong> Si ejecutas el microservidor incluido (<code>python3 server/portable_cms_server.py</code> o lo subes a cualquier hosting con Node o Python), los cambios se guardan directamente en el disco del servidor sin necesidad de pasos adicionales.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. TAB: CAROUSEL & BANNERS -->
+      <section class="admin-tab-pane" id="tab-carousel" hidden>
+        <div class="admin-card">
+          <div class="slide-card-header">
+            <h3>Banners & Diapositivas de la Portada Principal</h3>
+            <span>Edita textos, colecciones vinculadas y paletas cromáticas</span>
+          </div>
+          <div id="carousel-slides-list">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. TAB: PRODUCTS & PRICING -->
+      <section class="admin-tab-pane" id="tab-products" hidden>
+        <div class="admin-card">
+          <div class="slide-card-header">
+            <h3>Gestión de Catálogo de Productos</h3>
+            <button type="button" class="btn btn-primary" id="btn-admin-add-product">
+              + Agregar Nuevo Producto
+            </button>
+          </div>
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th style="width: 60px;">Foto</th>
+                <th>Nombre & Slug</th>
+                <th>Colección</th>
+                <th>Formato</th>
+                <th>Precio / Presentaciones</th>
+                <th>Personalizable</th>
+                <th>Bestseller</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="admin-products-table-body">
+              <!-- Populated dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 4. TAB: FRAGRANCE LIBRARY -->
+      <section class="admin-tab-pane" id="tab-fragrances" hidden>
+        <div class="admin-card">
+          <div class="slide-card-header">
+            <h3>Biblioteca Olfativa (Notas de Salida, Corazón y Fondo)</h3>
+            <button type="button" class="btn btn-primary" id="btn-admin-add-fragrance">
+              + Agregar Nuevo Aroma
+            </button>
+          </div>
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Aroma</th>
+                <th>Familia Olfativa</th>
+                <th>Temporada</th>
+                <th>Intensidad</th>
+                <th>Pirámide Olfativa</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="admin-fragrances-table-body">
+              <!-- Populated dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 5. TAB: EDITORIAL BLOG -->
+      <section class="admin-tab-pane" id="tab-blog" hidden>
+        <div class="admin-card">
+          <div class="slide-card-header">
+            <h3>Entradas de Blog, Cultura y Guía de Cuidado</h3>
+            <span>Consejos de primer encendido, conservación de cera vegetal y notas de marca</span>
+          </div>
+          <div id="admin-blog-list">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. TAB: GENERAL SETTINGS -->
+      <section class="admin-tab-pane" id="tab-settings" hidden>
+        <div class="admin-card">
+          <h3>Identidad de Marca & Datos de Contacto</h3>
+          <div class="admin-form-grid" style="margin-top: 1rem;">
+            <div class="form-group">
+              <label>Nombre de Marca:</label>
+              <input type="text" id="cfg-brand-name" class="admin-input" />
+            </div>
+            <div class="form-group">
+              <label>Slogan Principal:</label>
+              <input type="text" id="cfg-tagline" class="admin-input" />
+            </div>
+            <div class="form-group full-width">
+              <label>Bajada Descriptiva:</label>
+              <input type="text" id="cfg-subtitle" class="admin-input" />
+            </div>
+            <div class="form-group">
+              <label>WhatsApp de Pedidos (Solo números):</label>
+              <input type="text" id="cfg-whatsapp" class="admin-input" />
+            </div>
+            <div class="form-group">
+              <label>Instagram Handle:</label>
+              <input type="text" id="cfg-instagram" class="admin-input" />
+            </div>
+            <div class="form-group full-width">
+              <label>Correo Electrónico:</label>
+              <input type="email" id="cfg-email" class="admin-input" />
+            </div>
+          </div>
+        </div>
+
+        <div class="admin-card">
+          <h3>Reglas de Envío a Domicilio</h3>
+          <div class="admin-form-grid" style="margin-top: 1rem;">
+            <div class="form-group">
+              <label>Monto Mínimo para Envío Gratis ($ MXN):</label>
+              <input type="number" id="cfg-free-shipping" class="admin-input" value="600" />
+            </div>
+            <div class="form-group">
+              <label>Tarifa Estándar de Envío Nacional ($ MXN):</label>
+              <input type="number" id="cfg-shipping-rate" class="admin-input" value="120" />
+            </div>
+          </div>
+        </div>
+
+        <div class="admin-card">
+          <h3>Barra de Avisos Superior (Rotación de Mensajes)</h3>
+          <div class="admin-form-grid" style="margin-top: 1rem;">
+            <div class="form-group full-width">
+              <label>Mensaje 1:</label>
+              <input type="text" id="cfg-announcement-1" class="admin-input" />
+            </div>
+            <div class="form-group full-width">
+              <label>Mensaje 2:</label>
+              <input type="text" id="cfg-announcement-2" class="admin-input" />
+            </div>
+            <div class="form-group full-width">
+              <label>Mensaje 3:</label>
+              <input type="text" id="cfg-announcement-3" class="admin-input" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. TAB: INTEGRATIONS -->
+      <section class="admin-tab-pane" id="tab-integrations" hidden>
+        <div class="admin-card">
+          <h3>Conexión Stripe (Pasarela Bancaria de Tarjetas)</h3>
+          <div class="admin-form-grid" style="margin-top: 1rem;">
+            <div class="form-group">
+              <label>Modo Stripe:</label>
+              <select id="int-stripe-mode" class="admin-select">
+                <option value="sandbox">Sandbox / Simulación Interactiva (Pruebas)</option>
+                <option value="live">Producción / Enlace de Pago Real</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Stripe Publishable Key:</label>
+              <input type="text" id="int-stripe-pk" class="admin-input" placeholder="pk_live_... o pk_test_..." />
+            </div>
+            <div class="form-group full-width">
+              <label>Stripe Payment Link Predeterminado (Opcional):</label>
+              <input type="url" id="int-stripe-payment-link" class="admin-input" placeholder="https://buy.stripe.com/..." />
+            </div>
+          </div>
+        </div>
+
+        <div class="admin-card">
+          <h3>Conexión con Tiendas Externas (Shopify & Etsy)</h3>
+          <div class="admin-form-grid" style="margin-top: 1rem;">
+            <div class="form-group">
+              <label>Dominio de Tienda Shopify:</label>
+              <input type="text" id="int-shopify-domain" class="admin-input" />
+            </div>
+            <div class="form-group">
+              <label>URL de Tienda Shopify:</label>
+              <input type="url" id="int-shopify-url" class="admin-input" />
+            </div>
+            <div class="form-group">
+              <label>Nombre de Tienda en Etsy:</label>
+              <input type="text" id="int-etsy-shop" class="admin-input" />
+            </div>
+            <div class="form-group">
+              <label>URL de Tienda Etsy:</label>
+              <input type="url" id="int-etsy-url" class="admin-input" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Product Edit Modal -->
+  <div class="admin-modal-backdrop" id="admin-product-modal" hidden>
+    <div class="admin-modal-dialog">
+      <div class="admin-modal-header">
+        <h3 id="admin-product-modal-title">Editar Producto</h3>
+        <button type="button" class="admin-modal-close" id="admin-product-modal-close">&times;</button>
+      </div>
+      <form id="admin-product-form">
+        <div class="admin-modal-body">
+          <div class="admin-form-grid">
+            <div class="form-group">
+              <label>ID Único (sin espacios):</label>
+              <input type="text" id="prod-edit-id" class="admin-input" required />
+            </div>
+            <div class="form-group">
+              <label>Título del Producto:</label>
+              <input type="text" id="prod-edit-title" class="admin-input" required />
+            </div>
+            <div class="form-group">
+              <label>Colección:</label>
+              <select id="prod-edit-collection" class="admin-select"></select>
+            </div>
+            <div class="form-group">
+              <label>Formato / Categoría:</label>
+              <input type="text" id="prod-edit-category" class="admin-input" />
+            </div>
+            <div class="form-group full-width">
+              <label>Descripción Corta:</label>
+              <input type="text" id="prod-edit-short-desc" class="admin-input" />
+            </div>
+            <div class="form-group full-width">
+              <label>Descripción Detallada:</label>
+              <textarea id="prod-edit-desc" class="admin-textarea" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label>Ruta de Imagen Principal:</label>
+              <input type="text" id="prod-edit-image" class="admin-input" />
+            </div>
+            <div class="form-group">
+              <label>Tipo de Cera:</label>
+              <input type="text" id="prod-edit-wax-type" class="admin-input" value="100% Cera de Soya Natural" />
+            </div>
+            <div class="form-group">
+              <label>Dimensiones:</label>
+              <input type="text" id="prod-edit-dimensions" class="admin-input" />
+            </div>
+            <div class="form-group">
+              <label>Duración Estimada:</label>
+              <input type="text" id="prod-edit-burntime" class="admin-input" />
+            </div>
+
+            <div class="form-group full-width">
+              <label>Presentaciones / Variantes (Formato JSON):</label>
+              <textarea id="prod-edit-variants-json" class="admin-textarea" rows="4"></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label>Aromas Permitidos para este Producto:</label>
+              <div class="check-grid" id="prod-edit-fragrances-checks"></div>
+            </div>
+
+            <!-- Customization Settings -->
+            <div class="form-group full-width">
+              <label class="switch-label">
+                <input type="checkbox" id="prod-edit-custom-toggle" />
+                <span>✦ ¿Es un producto con personalización interactiva? (Grabado, tarjeta o etiqueta)</span>
+              </label>
+              <div class="custom-details-box" id="prod-edit-custom-details-box" hidden>
+                <div class="admin-form-grid">
+                  <div class="form-group">
+                    <label>Etiqueta del Campo para el Cliente:</label>
+                    <input type="text" id="prod-edit-custom-label" class="admin-input" />
+                  </div>
+                  <div class="form-group">
+                    <label>Ejemplo / Placeholder:</label>
+                    <input type="text" id="prod-edit-custom-placeholder" class="admin-input" />
+                  </div>
+                  <div class="form-group">
+                    <label>Límite de Caracteres:</label>
+                    <input type="number" id="prod-edit-custom-max" class="admin-input" value="80" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="switch-label">
+                <input type="checkbox" id="prod-edit-bestseller" />
+                <span>Marcar como Bestseller</span>
+              </label>
+            </div>
+            <div class="form-group">
+              <label>URL de Producto en Shopify (Opcional):</label>
+              <input type="url" id="prod-edit-shopify-url" class="admin-input" />
+            </div>
+            <div class="form-group full-width">
+              <label>URL de Listado en Etsy (Opcional):</label>
+              <input type="url" id="prod-edit-etsy-url" class="admin-input" />
+            </div>
+          </div>
+        </div>
+        <div class="admin-modal-footer">
+          <button type="submit" class="btn btn-primary">Guardar Producto</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Fragrance Edit Modal -->
+  <div class="admin-modal-backdrop" id="admin-fragrance-modal" hidden>
+    <div class="admin-modal-dialog">
+      <div class="admin-modal-header">
+        <h3 id="admin-fragrance-modal-title">Editar Aroma</h3>
+        <button type="button" class="admin-modal-close" id="admin-fragrance-modal-close">&times;</button>
+      </div>
+      <form id="admin-fragrance-form">
+        <div class="admin-modal-body">
+          <div class="admin-form-grid">
+            <div class="form-group">
+              <label>ID Único:</label>
+              <input type="text" id="frag-edit-id" class="admin-input" required />
+            </div>
+            <div class="form-group">
+              <label>Nombre del Aroma:</label>
+              <input type="text" id="frag-edit-name" class="admin-input" required />
+            </div>
+            <div class="form-group">
+              <label>Familia Olfativa:</label>
+              <select id="frag-edit-family" class="admin-select">
+                <option value="Cálido & Especiado">Cálido & Especiado</option>
+                <option value="Amaderado & Botánico">Amaderado & Botánico</option>
+                <option value="Floral & Tradicional">Floral & Tradicional</option>
+                <option value="Dulce & Gourmand">Dulce & Gourmand</option>
+                <option value="Fresco & Cítrico">Fresco & Cítrico</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Temporada Recomendada:</label>
+              <input type="text" id="frag-edit-season" class="admin-input" />
+            </div>
+            <div class="form-group">
+              <label>Intensidad Aromática (1 al 5):</label>
+              <input type="number" id="frag-edit-intensity" class="admin-input" min="1" max="5" value="4" />
+            </div>
+            <div class="form-group full-width">
+              <label>Descripción Olfativa:</label>
+              <textarea id="frag-edit-desc" class="admin-textarea" rows="2"></textarea>
+            </div>
+            <div class="form-group full-width">
+              <label>Notas de Salida (separadas por comas):</label>
+              <input type="text" id="frag-edit-notes-top" class="admin-input" placeholder="Manzana roja, cáscara de naranja..." />
+            </div>
+            <div class="form-group full-width">
+              <label>Notas de Corazón (separadas por comas):</label>
+              <input type="text" id="frag-edit-notes-heart" class="admin-input" placeholder="Canela de Ceilán, clavo..." />
+            </div>
+            <div class="form-group full-width">
+              <label>Notas de Fondo (separadas por comas):</label>
+              <input type="text" id="frag-edit-notes-base" class="admin-input" placeholder="Vainilla, sándalo..." />
+            </div>
+          </div>
+        </div>
+        <div class="admin-modal-footer">
+          <button type="submit" class="btn btn-primary">Guardar Aroma</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="src/admin/cms_admin_controller.js"></script>
+</body>
+</html>

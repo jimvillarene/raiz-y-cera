@@ -1,0 +1,38 @@
+{
+  "sources": {
+    "otono": "/Users/renejimenez/.gemini/antigravity/brain/e72f24ad-759f-4d62-96b5-50a79f841ead/.system_generated/logs/media/step_2_media_0.pdf",
+    "muertos": "/Users/renejimenez/.gemini/antigravity/brain/e72f24ad-759f-4d62-96b5-50a79f841ead/.system_generated/logs/media/step_3_media_0.pdf",
+    "luz": "/Users/renejimenez/Downloads/RC-Temporada de luz 2026.pdf"
+  },
+  "rules": [
+    { "source_key": "otono", "xref": 23, "target_subpath": "brand/logo-light.png", "max_dimension": 600 },
+    { "source_key": "luz", "xref": 30, "target_subpath": "brand/logo-dark.png", "max_dimension": 600 },
+    { "source_key": "otono", "xref": 22, "target_subpath": "hero/hero-otono.jpg", "max_dimension": 1400 },
+    { "source_key": "muertos", "xref": 22, "target_subpath": "hero/hero-muertos.jpg", "max_dimension": 1400 },
+    { "source_key": "luz", "xref": 234, "target_subpath": "hero/hero-temporada-luz.png", "max_dimension": 1200 },
+    { "source_key": "otono", "xref": 27, "target_subpath": "products/otono-cosecha-3.png", "max_dimension": 900 },
+    { "source_key": "otono", "xref": 28, "target_subpath": "products/otono-cosecha-6.png", "max_dimension": 900 },
+    { "source_key": "otono", "xref": 34, "target_subpath": "products/otono-tierra.png", "max_dimension": 900 },
+    { "source_key": "otono", "xref": 33, "target_subpath": "products/otono-nido.png", "max_dimension": 900 },
+    { "source_key": "otono", "xref": 39, "target_subpath": "products/otono-abrigo.png", "max_dimension": 1000 },
+    { "source_key": "muertos", "xref": 28, "target_subpath": "products/muertos-memorias-1.png", "max_dimension": 900 },
+    { "source_key": "muertos", "xref": 27, "target_subpath": "products/muertos-memorias-2.png", "max_dimension": 900 },
+    { "source_key": "muertos", "xref": 29, "target_subpath": "products/muertos-memorias-3.png", "max_dimension": 900 },
+    { "source_key": "muertos", "xref": 35, "target_subpath": "products/muertos-tradicion.png", "max_dimension": 1000 },
+    { "source_key": "muertos", "xref": 42, "target_subpath": "products/muertos-ofrenda.png", "max_dimension": 900 },
+    { "source_key": "muertos", "xref": 41, "target_subpath": "products/muertos-catrina.png", "max_dimension": 900 },
+    { "source_key": "luz", "xref": 37, "target_subpath": "products/luz-postales-coleccion.png", "max_dimension": 1000 },
+    { "source_key": "luz", "xref": 43, "target_subpath": "products/luz-flor-invierno.png", "max_dimension": 900 },
+    { "source_key": "luz", "xref": 44, "target_subpath": "products/luz-escarcha.png", "max_dimension": 900 },
+    { "source_key": "luz", "xref": 51, "target_subpath": "products/luz-luces-rojo.png", "max_dimension": 900 },
+    { "source_key": "luz", "xref": 52, "target_subpath": "products/luz-luces-dorado.png", "max_dimension": 900 },
+    { "source_key": "luz", "xref": 57, "target_subpath": "products/luz-trio-invierno.png", "max_dimension": 1000 },
+    { "source_key": "luz", "xref": 63, "target_subpath": "products/luz-ritual-navideno.png", "max_dimension": 1000 },
+    { "source_key": "luz", "xref": 69, "target_subpath": "products/luz-hogar.png", "max_dimension": 1000 },
+    { "source_key": "luz", "xref": 76, "target_subpath": "products/luz-bosque-nevado.png", "max_dimension": 1000 },
+    { "source_key": "luz", "xref": 81, "target_subpath": "products/luz-pinos-marfil.png", "max_dimension": 1000 },
+    { "source_key": "luz", "xref": 88, "target_subpath": "products/luz-magia-diciembre.png", "max_dimension": 1000 },
+    { "source_key": "luz", "xref": 94, "target_subpath": "products/luz-destellos.png", "max_dimension": 900 },
+    { "source_key": "luz", "xref": 99, "target_subpath": "products/luz-nuevos-comienzos.png", "max_dimension": 1000 }
+  ]
+}

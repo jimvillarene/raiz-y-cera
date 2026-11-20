@@ -1,0 +1,1165 @@
+{
+  "meta": {
+    "schemaVersion": "1.0.0",
+    "lastUpdated": "2026-11-20T17:20:00Z",
+    "updatedBy": "Raíz y Cera CMS"
+  },
+  "siteConfig": {
+    "brandName": "RAÍZ Y CERA",
+    "tagline": "RAÍCES QUE ILUMINAN",
+    "subtitle": "Alta Cerería Botánica en Cera de Soya · Hecha a Mano",
+    "announcementBars": [
+      "ENVÍO GRATIS EN PEDIDOS DESDE $600 MXN · CERA DE SOYA 100% NATURAL HECHA A MANO",
+      "TEMPORADA DE LUZ 2026 · EDICIONES DE COLECCIÓN Y PEDIDOS PERSONALIZADOS",
+      "CONEXIÓN DIRECTA CON STRIPE, SHOPIFY, ETSY Y ATENCIÓN PERSONALIZADA VÍA WHATSAPP"
+    ],
+    "currency": "MXN",
+    "freeShippingThreshold": 600,
+    "standardShippingRate": 120,
+    "contact": {
+      "whatsappNumber": "5527026347",
+      "whatsappDisplay": "55 2702 6347",
+      "instagramHandle": "@raizycera",
+      "instagramUrl": "https://www.instagram.com/raizycera",
+      "email": "hola@raizycera.mx",
+      "location": "México · Envíos seguros a toda la República"
+    },
+    "customOrdersBanner": {
+      "title": "¿Buscas algo especial para tu evento o regalo corporativo?",
+      "subtitle": "Creamos ediciones personalizadas en cera de soya con etiquetas a medida, selección de notas olfativas y empaque artesanal.",
+      "ctaText": "Cotizar Pedido Personalizado"
+    },
+    "integrations": {
+      "checkoutModes": {
+        "stripe": true,
+        "marketplace": true,
+        "whatsapp": true
+      },
+      "stripe": {
+        "mode": "sandbox",
+        "publishableKey": "pk_test_51RaizYCeraDemoKey0001",
+        "defaultPaymentLink": "",
+        "webhookEndpoint": "/api/stripe/checkout-session"
+      },
+      "shopify": {
+        "enabled": true,
+        "storeDomain": "raiz-y-cera.myshopify.com",
+        "storefrontUrl": "https://www.shopify.com/mx",
+        "buyButtonChannelId": ""
+      },
+      "etsy": {
+        "enabled": true,
+        "shopName": "RaizYCeraAtelier",
+        "shopUrl": "https://www.etsy.com/mx"
+      }
+    }
+  },
+  "heroCarousel": [
+    {
+      "id": "slide-temporada-luz",
+      "badge": "COLECCIÓN ESPECIAL 2026",
+      "title": "Temporada de Luz",
+      "subtitle": "Composiciones botánicas en cera de soya, pinos esculturales y rituales aromáticos que iluminan el invierno con serenidad.",
+      "ctaPrimaryText": "Explorar Temporada de Luz",
+      "ctaPrimaryCollection": "temporada-de-luz",
+      "ctaSecondaryText": "Descubrir Aromas",
+      "ctaSecondaryAction": "open-fragrance-explorer",
+      "image": "assets/images/hero/hero-temporada-luz.png",
+      "theme": "light-gold",
+      "active": true
+    },
+    {
+      "id": "slide-otono",
+      "badge": "CATÁLOGO OTOÑO 2026",
+      "title": "Aromas que Abrazan la Temporada",
+      "subtitle": "Calabazas artesanales, florivelas y bases torneadas a mano con notas envolventes de manzana canela, vainilla y maderas.",
+      "ctaPrimaryText": "Ver Colección Otoño",
+      "ctaPrimaryCollection": "coleccion-otono",
+      "ctaSecondaryText": "Personalizar Vela",
+      "ctaSecondaryAction": "filter-customizable",
+      "image": "assets/images/hero/hero-otono.jpg",
+      "theme": "warm-terracotta",
+      "active": true
+    },
+    {
+      "id": "slide-muertos",
+      "badge": "EDICIÓN PATRIMONIAL 2026",
+      "title": "Colección Día de Muertos",
+      "subtitle": "Cempasúchil esculpido pétalo a pétalo, pan de muerto tradicional y velas personalizadas que honran la memoria.",
+      "ctaPrimaryText": "Explorar Día de Muertos",
+      "ctaPrimaryCollection": "dia-de-muertos",
+      "ctaSecondaryText": "Ver Paquetes Ofrenda",
+      "ctaSecondaryAction": "focus-product:muertos-tradicion",
+      "image": "assets/images/hero/hero-muertos.jpg",
+      "theme": "amber-shadow",
+      "active": true
+    }
+  ],
+  "collections": [
+    {
+      "id": "temporada-de-luz",
+      "slug": "temporada-de-luz",
+      "name": "Temporada de Luz 2026",
+      "subtitle": "Colección Especial de Invierno y Año Nuevo",
+      "description": "Diseños inspirados en pequeñas escenas invernales, bosques nevados y rituales de gratitud, abundancia y nuevos comienzos.",
+      "coverImage": "assets/images/hero/hero-temporada-luz.png",
+      "accentColor": "#9C7A44",
+      "featured": true
+    },
+    {
+      "id": "coleccion-otono",
+      "slug": "coleccion-otono",
+      "name": "Colección Otoño 2026",
+      "subtitle": "Aromas que abrazan la temporada",
+      "description": "Cosechas escultóricas en cera de soya sobre bases artesanales y arreglos florivelas que llenan el hogar de calidez.",
+      "coverImage": "assets/images/hero/hero-otono.jpg",
+      "accentColor": "#8C4A27",
+      "featured": true
+    },
+    {
+      "id": "dia-de-muertos",
+      "slug": "dia-de-muertos",
+      "name": "Día de Muertos 2026",
+      "subtitle": "Raíces que iluminan la memoria",
+      "description": "Homenaje artesanal a nuestras tradiciones con flores de cempasúchil moldeadas a mano, pan de muerto, papel picado y frascos personalizados.",
+      "coverImage": "assets/images/hero/hero-muertos.jpg",
+      "accentColor": "#B85D19",
+      "featured": true
+    }
+  ],
+  "fragrances": [
+    {
+      "id": "manzana-canela",
+      "name": "Manzana Canela",
+      "family": "Cálido & Especiado",
+      "season": "Otoño / Invierno",
+      "intensity": 5,
+      "notes": {
+        "top": ["Manzana Roja Horneada", "Cáscara de Naranja"],
+        "heart": ["Canela de Ceilán", "Clavo de Olor", "Nuez Moscada"],
+        "base": ["Vainilla Tostada", "Azúcar Morena", "Madera de Cedro"]
+      },
+      "description": "Un abrazo cálido y nostálgico que combina la dulzura frutal de manzanas recién horneadas con el corazón especiado de la canela artesanal."
+    },
+    {
+      "id": "vainilla",
+      "name": "Vainilla Artesanal",
+      "family": "Dulce & Gourmand",
+      "season": "Todo el Año",
+      "intensity": 4,
+      "notes": {
+        "top": ["Flor de Vainilla", "Crema Batida"],
+        "heart": ["Vaina de Vainilla de Papantla", "Haba Tonka"],
+        "base": ["Ámbar Dorado", "Sándalo Suave", "Almizcle Blanco"]
+      },
+      "description": "Aroma aterciopelado, sereno y profundo que envuelve cualquier estancia con la pureza de la vainilla mexicana y un fondo ambarado."
+    },
+    {
+      "id": "maderas",
+      "name": "Maderas Nobles",
+      "family": "Amaderado & Botánico",
+      "season": "Otoño / Invierno",
+      "intensity": 5,
+      "notes": {
+        "top": ["Bergamota Seca", "Cardamomo"],
+        "heart": ["Cedro Rojo", "Pino Silvestre", "Vetiver"],
+        "base": ["Sándalo", "Ámbar Resinoso", "Musgo de Roble"]
+      },
+      "description": "Composición sofisticada de carácter arquitectónico y terroso que evoca la quietud de una cabaña rodeada de bosques antiguos."
+    },
+    {
+      "id": "cempasuchil",
+      "name": "Flor de Cempasúchil",
+      "family": "Floral & Tradicional",
+      "season": "Día de Muertos",
+      "intensity": 4,
+      "notes": {
+        "top": ["Pétalos Frescos de Cempasúchil", "Mandarina Verde"],
+        "heart": ["Néctar Herbal", "Flor de Azahar", "Tallo Botánico"],
+        "base": ["Copal Suave", "Tierra Húmeda", "Miel Silvestre"]
+      },
+      "description": "Interpretación auténtica y luminosa de la flor de veinte pétalos, con su inconfundible carácter herbal-floral y un sutil eco de copal."
+    },
+    {
+      "id": "pan-de-muerto",
+      "name": "Pan de Muerto",
+      "family": "Dulce & Gourmand",
+      "season": "Día de Muertos",
+      "intensity": 5,
+      "notes": {
+        "top": ["Ralladura de Naranja", "Agua de Azahar"],
+        "heart": ["Mantequilla Dorada", "Masa Brioche Recién Horneada", "Anís Estrella"],
+        "base": ["Azúcar Cristalina", "Vainilla Tibia"]
+      },
+      "description": "Tributo olfativo a la panadería tradicional mexicana: notas cítricas de azahar y naranja fundidas sobre mantequilla tibia y azúcar."
+    },
+    {
+      "id": "pino-navideno",
+      "name": "Pino Navideño",
+      "family": "Amaderado & Botánico",
+      "season": "Temporada de Luz",
+      "intensity": 5,
+      "notes": {
+        "top": ["Agujas de Abeto", "Eucalipto Fresco", "Rocío Invernal"],
+        "heart": ["Pino Ciprés", "Bayas de Enebro", "Resina de Bosque"],
+        "base": ["Madera de Cedro", "Musgo", "Ámbar Frío"]
+      },
+      "description": "La frescura balsámica y revitalizante de un bosque invernal recién cortado que viste el hogar de celebración."
+    },
+    {
+      "id": "galleta-jengibre",
+      "name": "Galleta de Jengibre",
+      "family": "Dulce & Gourmand",
+      "season": "Temporada de Luz",
+      "intensity": 5,
+      "notes": {
+        "top": ["Jengibre Fresco Rallado", "Canela Molida"],
+        "heart": ["Melaza Oscura", "Galleta de Mantequilla", "Clavo"],
+        "base": ["Vainilla Francesa", "Caramelo Tostado"]
+      },
+      "description": "Delicia festiva recién salida del horno donde el jengibre especiado se funde con melaza, mantequilla y vainilla francesa."
+    },
+    {
+      "id": "canela",
+      "name": "Canela Imperial",
+      "family": "Cálido & Especiado",
+      "season": "Temporada de Luz",
+      "intensity": 5,
+      "notes": {
+        "top": ["Corteza de Canela", "Pimienta Rosa"],
+        "heart": ["Hoja de Canelo", "Anís", "Clavo Dulce"],
+        "base": ["Madera Cálida", "Vainilla Ambarada"]
+      },
+      "description": "Especia pura, vibrante y reconfortante que transforma la atmósfera con una estela cálida de larga duración."
+    },
+    {
+      "id": "vainilla-naranja",
+      "name": "Vainilla Naranja",
+      "family": "Fresco & Cítrico",
+      "season": "Temporada de Luz",
+      "intensity": 4,
+      "notes": {
+        "top": ["Naranja Dulce", "Mandarina Soleada"],
+        "heart": ["Flor de Naranjo", "Orquídea de Vainilla"],
+        "base": ["Crema de Vainilla", "Sándalo Blanco"]
+      },
+      "description": "Equilibrio luminoso entre la chispa cítrica de la naranja madura y la suavidad cremosa de la vainilla."
+    },
+    {
+      "id": "brisa-herbal",
+      "name": "Brisa Frescura Herbal",
+      "family": "Fresco & Cítrico",
+      "season": "Temporada de Luz",
+      "intensity": 4,
+      "notes": {
+        "top": ["Menta Silvestre", "Salvia Blanca", "Limón Verde"],
+        "heart": ["Romero Fresco", "Lavanda Alpina", "Té Blanco"],
+        "base": ["Vetiver Limpio", "Cedro Claro"]
+      },
+      "description": "Acorde botánico purificante y cristalino que renueva la energía de cualquier espacio."
+    },
+    {
+      "id": "sandalo-bergamota",
+      "name": "Sándalo & Bergamota (Ritual)",
+      "family": "Amaderado & Botánico",
+      "season": "Año Nuevo / Todo el Año",
+      "intensity": 4,
+      "notes": {
+        "top": ["Bergamota Italiana", "Toronja Rosada"],
+        "heart": ["Sándalo Sagrado", "Flor de Loto"],
+        "base": ["Ámbar Mineral", "Cedro Blanco", "Almizcle"]
+      },
+      "description": "Sinergia meditativa creada para los rituales de gratitud y nuevos comienzos, uniendo la claridad de la bergamota con la paz del sándalo."
+    }
+  ],
+  "products": [
+    {
+      "id": "otono-cosecha",
+      "slug": "cosecha-de-otono",
+      "title": "Cosecha de Otoño",
+      "collectionId": "coleccion-otono",
+      "category": "Arreglos en Base Artesanal",
+      "shortDescription": "Vela aromática escultórica de calabazas y hojas otoñales en base artesanal acanalada con lazo de yute.",
+      "description": "Nuestra pieza insignia del catálogo de Otoño. Cada calabaza y hoja de roble es moldeada a mano en cera de soya 100% natural, dispuesta sobre una base artesanal reutilizable con acabado acanalado y cinturón de fibra natural.",
+      "craftsmanshipDetails": {
+        "waxType": "100% Cera de Soya Natural",
+        "handmade": true,
+        "dimensions": "12 cm o 18 cm de diámetro",
+        "burnTime": "35 a 55 horas"
+      },
+      "allowedFragrances": ["manzana-canela", "vainilla", "maderas"],
+      "variants": [
+        {
+          "id": "cosecha-3-calabazas",
+          "name": "3 Calabazas · Base 12 cm",
+          "price": 349,
+          "sku": "RC-OTO-COS3",
+          "dimensions": "12 cm diámetro",
+          "image": "assets/images/products/otono-cosecha-3.png"
+        },
+        {
+          "id": "cosecha-6-calabazas",
+          "name": "6 Calabazas · Base 18 cm",
+          "price": 529,
+          "sku": "RC-OTO-COS6",
+          "dimensions": "18 cm diámetro",
+          "image": "assets/images/products/otono-cosecha-6.png"
+        }
+      ],
+      "customizable": {
+        "enabled": true,
+        "label": "Mensaje en tarjeta de regalo o combinación de tonos",
+        "placeholder": "Ej. Para mamá con cariño / Tonos terracota y marfil",
+        "maxLength": 90
+      },
+      "images": [
+        "assets/images/products/otono-cosecha-3.png",
+        "assets/images/products/otono-cosecha-6.png"
+      ],
+      "externalLinks": {
+        "stripePriceId": "price_otono_cosecha",
+        "stripePaymentLink": "",
+        "shopifyProductUrl": "https://www.shopify.com/mx",
+        "etsyListingUrl": "https://www.etsy.com/mx"
+      },
+      "featured": true,
+      "bestseller": true
+    },
+    {
+      "id": "otono-tierra",
+      "slug": "tierra-base-ovalada",
+      "title": "Tierra",
+      "collectionId": "coleccion-otono",
+      "category": "Arreglos en Base Artesanal",
+      "shortDescription": "Vela aromática con 4 calabazas escultóricas en base artesanal ovalada.",
+      "description": "Composición lineal de cuatro calabazas en tonos marfil, terracota y cacao sobre una base artesanal ovalada con detalle de yute. Ideal para centros de mesa, consolas o escritorios.",
+      "craftsmanshipDetails": {
+        "waxType": "100% Cera de Soya Natural",
+        "handmade": true,
+        "dimensions": "Base ovalada artesanal",
+        "burnTime": "30 a 40 horas"
+      },
+      "allowedFragrances": ["manzana-canela", "vainilla", "maderas"],
+      "variants": [
+        {
+          "id": "tierra-ovalada",
+          "name": "4 Calabazas · Base Ovalada",
+          "price": 279,
+          "sku": "RC-OTO-TIE4",
+          "dimensions": "Estándar Ovalada",
+          "image": "assets/images/products/otono-tierra.png"
+        }
+      ],
+      "customizable": {
+        "enabled": false,
+        "label": "",
+        "placeholder": "",
+        "maxLength": 0
+      },
+      "images": [
+        "assets/images/products/otono-tierra.png"
+      ],
+      "externalLinks": {
+        "stripePriceId": "price_otono_tierra",
+        "stripePaymentLink": "",
+        "shopifyProductUrl": "https://www.shopify.com/mx",
+        "etsyListingUrl": "https://www.etsy.com/mx"
+      },
+      "featured": false,
+      "bestseller": false
+    },
+    {
+      "id": "otono-nido",
+      "slug": "nido-frasco-vidrio",
+      "title": "Nido",
+      "collectionId": "coleccion-otono",
+      "category": "Velas en Frasco",
+      "shortDescription": "Vela aromática con 3 calabazas en frasco de vidrio decorado con yute.",
+      "description": "Tres calabazas miniatura reposan sobre una cama cremosa de cera de soya con destellos de canela natural dentro de un frasco de vidrio cristalino anudado con cordón rústico.",
+      "craftsmanshipDetails": {
+        "waxType": "100% Cera de Soya Natural",
+        "handmade": true,
+        "dimensions": "Frasco de vidrio con lazo",
+        "burnTime": "20 a 25 horas"
+      },
+      "allowedFragrances": ["manzana-canela", "vainilla", "maderas"],
+      "variants": [
+        {
+          "id": "nido-estandar",
+          "name": "Frasco con 3 Calabazas",
+          "price": 110,
+          "sku": "RC-OTO-NID1",
+          "dimensions": "Frasco individual",
+          "image": "assets/images/products/otono-nido.png"
+        }
+      ],
+      "customizable": {
+        "enabled": true,
+        "label": "Etiqueta personalizada para recuerdo o regalo",
+        "placeholder": "Ej. Gracias por acompañarnos",
+        "maxLength": 60
+      },
+      "images": [
+        "assets/images/products/otono-nido.png"
+      ],
+      "externalLinks": {
+        "stripePriceId": "price_otono_nido",
+        "stripePaymentLink": "",
+        "shopifyProductUrl": "https://www.shopify.com/mx",
+        "etsyListingUrl": "https://www.etsy.com/mx"
+      },
+      "featured": false,
+      "bestseller": true
+    },
+    {
+      "id": "otono-abrigo",
+      "slug": "abrigo-arreglo-florivelas",
+      "title": "Abrigo",
+      "collectionId": "coleccion-otono",
+      "category": "Florivelas & Bouquets",
+      "shortDescription": "Arreglo florivelas aromático en caja de madera con flores y calabazas de cera de soya.",
+      "description": "Un bouquet escultórico que fusiona florivelas moldeadas pétalo a pétalo, calabazas otoñales y follaje natural preservado sobre una base cuadrada de madera con listón.",
+      "craftsmanshipDetails": {
+        "waxType": "100% Cera de Soya Natural + Botánicos Preservados",
+        "handmade": true,
+        "dimensions": "Caja de madera artesanal",
+        "burnTime": "Pieza decorativa y aromática"
+      },
+      "allowedFragrances": ["manzana-canela", "vainilla", "maderas"],
+      "variants": [
+        {
+          "id": "abrigo-bouquet",
+          "name": "Arreglo Florivelas en Madera",
+          "price": 480,
+          "sku": "RC-OTO-ABR1",
+          "dimensions": "Caja bouquet",
+          "image": "assets/images/products/otono-abrigo.png"
+        }
+      ],
+      "customizable": {
+        "enabled": true,
+        "label": "Dedicatoria para tarjeta en el bouquet",
+        "placeholder": "Escribe aquí tu dedicatoria especial...",
+        "maxLength": 120
+      },
+      "images": [
+        "assets/images/products/otono-abrigo.png"
+      ],
+      "externalLinks": {
+        "stripePriceId": "price_otono_abrigo",
+        "stripePaymentLink": "",
+        "shopifyProductUrl": "https://www.shopify.com/mx",
+        "etsyListingUrl": "https://www.etsy.com/mx"
+      },
+      "featured": true,
+      "bestseller": true
+    },
+    {
+      "id": "muertos-memorias",
+      "slug": "memorias-vela-personalizada",
+      "title": "Memorias · Vela Personalizada",
+      "collectionId": "dia-de-muertos",
+      "category": "Velas en Frasco",
+      "shortDescription": "Vela aromática de cempasúchil en frasco de vidrio con tapa personalizada con el nombre que elijas.",
+      "description": "Diseñada para honrar y recordar con luz propia. Contiene una flor de cempasúchil escultórica en cera de soya (disponible en tono naranja tradicional o morado ceremonial) dentro de un frasco de vidrio con tapa grabada con el nombre de tu ser querido o destinatario.",
+      "craftsmanshipDetails": {
+        "waxType": "100% Cera de Soya Natural",
+        "handmade": true,
+        "dimensions": "Frasco de vidrio con tapa hermética personalizada",
+        "burnTime": "30 a 35 horas"
+      },
+      "allowedFragrances": ["cempasuchil", "pan-de-muerto", "vainilla", "manzana-canela"],
+      "variants": [
+        {
+          "id": "memorias-naranja",
+          "name": "Cempasúchil Naranja Tradicional",
+          "price": 220,
+          "sku": "RC-DDM-MEM-NAR",
+          "dimensions": "Frasco con tapa personalizada",
+          "image": "assets/images/products/muertos-memorias-2.png"
+        },
+        {
+          "id": "memorias-morado",
+          "name": "Cempasúchil Morado Ceremonial",
+          "price": 220,
+          "sku": "RC-DDM-MEM-MOR",
+          "dimensions": "Frasco con tapa personalizada",
+          "image": "assets/images/products/muertos-memorias-3.png"
+        }
+      ],
+      "customizable": {
+        "enabled": true,
+        "label": "Nombre a imprimir en la etiqueta de la tapa (Requerido para personalización)",
+        "placeholder": "Ej. Isra / Abuelita Elena / Familia Jiménez",
+        "maxLength": 40
+      },
+      "images": [
+        "assets/images/products/muertos-memorias-2.png",
+        "assets/images/products/muertos-memorias-1.png",
+        "assets/images/products/muertos-memorias-3.png"
+      ],
+      "externalLinks": {
+        "stripePriceId": "price_muertos_memorias",
+        "stripePaymentLink": "",
+        "shopifyProductUrl": "https://www.shopify.com/mx",
+        "etsyListingUrl": "https://www.etsy.com/mx"
+      },
+      "featured": true,
+      "bestseller": true
+    },
+    {
+      "id": "muertos-tradicion",
+      "slug": "tradicion-paquete-ofrenda",
+      "title": "Tradición · Paquete Ofrenda",
+      "collectionId": "dia-de-muertos",
+      "category": "Sets & Rituales",
+      "shortDescription": "Caja artesanal con selección de velas de cempasúchil, pan de muerto y papel picado en cera de soya.",
+      "description": "Un altar completo en una caja lista para regalar o colocar en tu ofrenda. Combina flores de cempasúchil, panes de muerto espolvoreados y bloques de papel picado en relieve moldeados en cera de soya aromática.",
+      "craftsmanshipDetails": {
+        "waxType": "100% Cera de Soya Natural",
+        "handmade": true,
+        "dimensions": "Caja kraft con sello Raíz y Cera (3, 6 o 9 piezas)",
+        "burnTime": "Variado por pieza"
+      },
+      "allowedFragrances": ["cempasuchil", "pan-de-muerto", "vainilla", "manzana-canela"],
+      "variants": [
+        {
+          "id": "tradicion-9-piezas",
+          "name": "Paquete 9 Piezas (Colección Completa)",
+          "price": 330,
+          "sku": "RC-DDM-TRA9",
+          "dimensions": "9 velas artesanales",
+          "image": "assets/images/products/muertos-tradicion.png"
+        },
+        {
+          "id": "tradicion-6-piezas",
+          "name": "Paquete 6 Piezas",
+          "price": 220,
+          "sku": "RC-DDM-TRA6",
+          "dimensions": "6 velas artesanales",
+          "image": "assets/images/products/muertos-tradicion.png"
+        },
+        {
+          "id": "tradicion-3-piezas",
+          "name": "Paquete 3 Piezas",
+          "price": 110,
+          "sku": "RC-DDM-TRA3",
+          "dimensions": "3 velas artesanales",
+          "image": "assets/images/products/muertos-tradicion.png"
+        },
+        {
+          "id": "individual-cempasuchil",
+          "name": "Cempasúchil Individual",
+          "price": 45,
+          "sku": "RC-DDM-IND-CEM",
+          "dimensions": "1 pieza individual",
+          "image": "assets/images/products/muertos-tradicion.png"
+        },
+        {
+          "id": "individual-pan",
+          "name": "Pan de Muerto Individual",
+          "price": 40,
+          "sku": "RC-DDM-IND-PAN",
+          "dimensions": "1 pieza individual",
+          "image": "assets/images/products/muertos-tradicion.png"
+        },
+        {
+          "id": "individual-papel",
+          "name": "Papel Picado Individual",
+          "price": 40,
+          "sku": "RC-DDM-IND-PAP",
+          "dimensions": "1 pieza individual",
+          "image": "assets/images/products/muertos-tradicion.png"
+        }
+      ],
+      "customizable": {
+        "enabled": true,
+        "label": "Preferencia de colores de papel picado o nota en caja",
+        "placeholder": "Ej. Incluir tonos rosa mexicano y azul / Nota de regalo",
+        "maxLength": 80
+      },
+      "images": [
+        "assets/images/products/muertos-tradicion.png"
+      ],
+      "externalLinks": {
+        "stripePriceId": "price_muertos_tradicion",
+        "stripePaymentLink": "",
+        "shopifyProductUrl": "https://www.shopify.com/mx",
+        "etsyListingUrl": "https://www.etsy.com/mx"
+      },
+      "featured": true,
+      "bestseller": true
+    },
+    {
+      "id": "muertos-ofrenda",
+      "slug": "ofrenda-arreglo-cempasuchil",
+      "title": "Ofrenda",
+      "collectionId": "dia-de-muertos",
+      "category": "Florivelas & Bouquets",
+      "shortDescription": "Arreglo de 3 flores de cempasúchil en base artesanal texturizada.",
+      "description": "Tres generosas flores de cempasúchil en cera de soya acompañadas de nube blanca preservada sobre un cáliz artesanal estriado con patas y cinta de yute.",
+      "craftsmanshipDetails": {
+        "waxType": "100% Cera de Soya Natural",
+        "handmade": true,
+        "dimensions": "Base artesanal con 3 cempasúchil",
+        "burnTime": "35 horas"
+      },
+      "allowedFragrances": ["cempasuchil", "pan-de-muerto", "vainilla", "manzana-canela"],
+      "variants": [
+        {
+          "id": "ofrenda-estandar",
+          "name": "Arreglo 3 Cempasúchil",
+          "price": 220,
+          "sku": "RC-DDM-OFR3",
+          "dimensions": "Estándar",
+          "image": "assets/images/products/muertos-ofrenda.png"
+        }
+      ],
+      "customizable": {
+        "enabled": false,
+        "label": "",
+        "placeholder": "",
+        "maxLength": 0
+      },
+      "images": [
+        "assets/images/products/muertos-ofrenda.png"
+      ],
+      "externalLinks": {
+        "stripePriceId": "price_muertos_ofrenda",
+        "stripePaymentLink": "",
+        "shopifyProductUrl": "https://www.shopify.com/mx",
+        "etsyListingUrl": "https://www.etsy.com/mx"
+      },
+      "featured": false,
+      "bestseller": false
+    },
+    {
+      "id": "muertos-catrina",
+      "slug": "catrina-taza-cempasuchil",
+      "title": "Catrina",
+      "collectionId": "dia-de-muertos",
+      "category": "Florivelas & Bouquets",
+      "shortDescription": "Taza de cerámica pintada estilo calavera con 3 velas de cempasúchil.",
+      "description": "Una pieza coleccionable que une la cerámica tradicional de calavera mexicana con tres flores de cempasúchil en tonos naranja, amarillo sol y morado.",
+      "craftsmanshipDetails": {
+        "waxType": "100% Cera de Soya Natural en Taza Cerámica Reutilizable",
+        "handmade": true,
+        "dimensions": "Taza cerámica + 3 flores de cera",
+        "burnTime": "40 horas"
+      },
+      "allowedFragrances": ["cempasuchil", "pan-de-muerto", "vainilla", "manzana-canela"],
+      "variants": [
+        {
+          "id": "catrina-taza",
+          "name": "Taza Catrina + 3 Cempasúchil",
+          "price": 349,
+          "sku": "RC-DDM-CAT1",
+          "dimensions": "Taza cerámica",
+          "image": "assets/images/products/muertos-catrina.png"
+        }
+      ],
+      "customizable": {
+        "enabled": true,
+        "label": "Tarjeta de dedicatoria opcional",
+        "placeholder": "Escribe un mensaje corto para acompañar tu regalo",
+        "maxLength": 80
+      },
+      "images": [
+        "assets/images/products/muertos-catrina.png"
+      ],
+      "externalLinks": {
+        "stripePriceId": "price_muertos_catrina",
+        "stripePaymentLink": "",
+        "shopifyProductUrl": "https://www.shopify.com/mx",
+        "etsyListingUrl": "https://www.etsy.com/mx"
+      },
+      "featured": true,
+      "bestseller": false
+    },
+    {
+      "id": "luz-postales-invierno",
+      "slug": "postales-de-invierno",
+      "title": "Postales de Invierno",
+      "collectionId": "temporada-de-luz",
+      "category": "Florivelas & Bouquets",
+      "shortDescription": "Cuatro diseños en caja de madera inspirados en pequeñas escenas que evocan la magia del invierno.",
+      "description": "Una colección de cuatro composiciones botánicas y escultóricas sobre base de madera: Flor de Invierno, Escarcha, Luces de Navidad Dorado y Luces de Navidad Rojo.",
+      "craftsmanshipDetails": {
+        "waxType": "100% Cera de Soya Natural",
+        "handmade": true,
+        "dimensions": "Base de madera artesanal con listón",
+        "burnTime": "40 a 50 horas"
+      },
+      "allowedFragrances": [
+        "pino-navideno",
+        "manzana-canela",
+        "galleta-jengibre",
+        "canela",
+        "vainilla-naranja",
+        "maderas",
+        "brisa-herbal"
+      ],
+      "variants": [
+        {
+          "id": "postal-flor-invierno",
+          "name": "Flor de Invierno",
+          "price": 280,
+          "sku": "RC-LUZ-POS-FLO",
+          "dimensions": "Arreglo en madera",
+          "image": "assets/images/products/luz-flor-invierno.png"
+        },
+        {
+          "id": "postal-escarcha",
+          "name": "Escarcha",
+          "price": 320,
+          "sku": "RC-LUZ-POS-ESC",
+          "dimensions": "Arreglo en madera",
+          "image": "assets/images/products/luz-escarcha.png"
+        },
+        {
+          "id": "postal-luces-dorado",
+          "name": "Luces de Navidad Dorado",
+          "price": 320,
+          "sku": "RC-LUZ-POS-DOR",
+          "dimensions": "Arreglo en madera",
+          "image": "assets/images/products/luz-luces-dorado.png"
+        },
+        {
+          "id": "postal-luces-rojo",
+          "name": "Luces de Navidad Rojo",
+          "price": 320,
+          "sku": "RC-LUZ-POS-ROJ",
+          "dimensions": "Arreglo en madera",
+          "image": "assets/images/products/luz-luces-rojo.png"
+        }
+      ],
+      "customizable": {
+        "enabled": true,
+        "label": "Mensaje para tarjeta navideña incluida",
+        "placeholder": "Ej. Con cariño para la familia...",
+        "maxLength": 100
+      },
+      "images": [
+        "assets/images/products/luz-postales-coleccion.png",
+        "assets/images/products/luz-flor-invierno.png",
+        "assets/images/products/luz-escarcha.png",
+        "assets/images/products/luz-luces-rojo.png",
+        "assets/images/products/luz-luces-dorado.png"
+      ],
+      "externalLinks": {
+        "stripePriceId": "price_luz_postales",
+        "stripePaymentLink": "",
+        "shopifyProductUrl": "https://www.shopify.com/mx",
+        "etsyListingUrl": "https://www.etsy.com/mx"
+      },
+      "featured": true,
+      "bestseller": true
+    },
+    {
+      "id": "luz-trio-invierno",
+      "slug": "trio-de-invierno",
+      "title": "Trío de Invierno",
+      "collectionId": "temporada-de-luz",
+      "category": "Sets & Rituales",
+      "shortDescription": "Set de tres velas en frasco con figuras navideñas y sinergias aromáticas de autor.",
+      "description": "Tres combinaciones aromáticas inspiradas en los sabores y aromas que hacen especial la temporada: Bosque Navideño (Pino Navideño y Canela), Dulce Encuentro (Manzana Canela y Vainilla Francesa) y Receta de Navidad (Galleta de Jengibre y Vainilla Francesa).",
+      "craftsmanshipDetails": {
+        "waxType": "100% Cera de Soya Natural",
+        "handmade": true,
+        "dimensions": "Estuche con 3 frascos de vidrio decorados",
+        "burnTime": "60 horas totales (20h c/u)"
+      },
+      "allowedFragrances": ["pino-navideno", "manzana-canela", "galleta-jengibre"],
+      "variants": [
+        {
+          "id": "trio-invierno-set",
+          "name": "Estuche con 3 Sinergias (Bosque + Dulce + Receta)",
+          "price": 330,
+          "sku": "RC-LUZ-TRI3",
+          "dimensions": "Set de 3 velas",
+          "image": "assets/images/products/luz-trio-invierno.png"
+        }
+      ],
+      "customizable": {
+        "enabled": true,
+        "label": "Dedicatoria en tarjeta interior del estuche",
+        "placeholder": "Ej. ¡Felices fiestas! Con amor...",
+        "maxLength": 100
+      },
+      "images": [
+        "assets/images/products/luz-trio-invierno.png"
+      ],
+      "externalLinks": {
+        "stripePriceId": "price_luz_trio",
+        "stripePaymentLink": "",
+        "shopifyProductUrl": "https://www.shopify.com/mx",
+        "etsyListingUrl": "https://www.etsy.com/mx"
+      },
+      "featured": true,
+      "bestseller": true
+    },
+    {
+      "id": "luz-ritual-navideno",
+      "slug": "ritual-navideno-wax-melts",
+      "title": "Ritual Navideño",
+      "collectionId": "temporada-de-luz",
+      "category": "Sets & Rituales",
+      "shortDescription": "Caja de regalo con derretidor de cerámica, 3 latas de wax melts (40g c/u), 4 tea lights y cerillos.",
+      "description": "Un pequeño ritual para disfrutar los aromas y la calidez de la temporada. Incluye un quemador de cerámica blanca minimalista, tres latas de wax melts de 40g cada una con figuras navideñas, cuatro velas tipo tea light y un frasco de vidrio con cerillos.",
+      "craftsmanshipDetails": {
+        "waxType": "100% Cera de Soya en Wax Melts + Cerámica",
+        "handmade": true,
+        "dimensions": "Caja de colección con tarjeta interior",
+        "burnTime": "+45 horas de difusión aromática"
+      },
+      "allowedFragrances": [
+        "pino-navideno",
+        "manzana-canela",
+        "galleta-jengibre",
+        "canela",
+        "vainilla-naranja",
+        "maderas"
+      ],
+      "variants": [
+        {
+          "id": "ritual-navideno-box",
+          "name": "Set Completo Ritual Navideño",
+          "price": 550,
+          "sku": "RC-LUZ-RIT1",
+          "dimensions": "Caja regalo completa",
+          "image": "assets/images/products/luz-ritual-navideno.png"
+        }
+      ],
+      "customizable": {
+        "enabled": true,
+        "label": "Elige tus 3 aromas de latas Wax Melts y mensaje para la tarjeta interior",
+        "placeholder": "Ej. Pino, Jengibre y Manzana Canela / Mensaje: ¡Felices fiestas!",
+        "maxLength": 140
+      },
+      "images": [
+        "assets/images/products/luz-ritual-navideno.png"
+      ],
+      "externalLinks": {
+        "stripePriceId": "price_luz_ritual",
+        "stripePaymentLink": "",
+        "shopifyProductUrl": "https://www.shopify.com/mx",
+        "etsyListingUrl": "https://www.etsy.com/mx"
+      },
+      "featured": true,
+      "bestseller": true
+    },
+    {
+      "id": "luz-de-hogar",
+      "slug": "luz-de-hogar",
+      "title": "Luz de Hogar",
+      "collectionId": "temporada-de-luz",
+      "category": "Arreglos en Base Artesanal",
+      "shortDescription": "Centro de mesa monumental con velas cilíndricas, pinos, follaje invernal y piñas naturales.",
+      "description": "Una composición de velas y elementos inspirados en la naturaleza que aporta calidez y un toque majestuoso a la decoración de la mesa navideña.",
+      "craftsmanshipDetails": {
+        "waxType": "100% Cera de Soya Natural",
+        "handmade": true,
+        "dimensions": "Centro de mesa grande con follaje",
+        "burnTime": "55 a 65 horas"
+      },
+      "allowedFragrances": ["pino-navideno", "canela"],
+      "variants": [
+        {
+          "id": "luz-hogar-centro",
+          "name": "Centro de Mesa Monumental",
+          "price": 610,
+          "sku": "RC-LUZ-HOG1",
+          "dimensions": "Centro de mesa",
+          "image": "assets/images/products/luz-hogar.png"
+        }
+      ],
+      "customizable": {
+        "enabled": true,
+        "label": "Nota o tarjeta de regalo",
+        "placeholder": "Mensaje opcional para tarjeta...",
+        "maxLength": 90
+      },
+      "images": [
+        "assets/images/products/luz-hogar.png"
+      ],
+      "externalLinks": {
+        "stripePriceId": "price_luz_hogar",
+        "stripePaymentLink": "",
+        "shopifyProductUrl": "https://www.shopify.com/mx",
+        "etsyListingUrl": "https://www.etsy.com/mx"
+      },
+      "featured": true,
+      "bestseller": false
+    },
+    {
+      "id": "luz-bosque-nevado",
+      "slug": "bosque-nevado",
+      "title": "Bosque Nevado",
+      "collectionId": "temporada-de-luz",
+      "category": "Arreglos en Base Artesanal",
+      "shortDescription": "Escena invernal de pinos escultóricos en recipiente artesanal de 12 cm (130g) o 18 cm (280g).",
+      "description": "Una pequeña escena inspirada en la tranquilidad de un bosque en invierno. Disponible en formato Chico (3 pinos, 12 cm de diámetro, 130g de cera de soya) y Grande (5 pinos, 18 cm de diámetro, 280g de cera de soya).",
+      "craftsmanshipDetails": {
+        "waxType": "100% Cera de Soya Natural (130g / 280g)",
+        "handmade": true,
+        "dimensions": "12 cm o 18 cm de diámetro",
+        "burnTime": "30 a 55 horas"
+      },
+      "allowedFragrances": [
+        "pino-navideno",
+        "manzana-canela",
+        "galleta-jengibre",
+        "canela",
+        "vainilla-naranja",
+        "maderas"
+      ],
+      "variants": [
+        {
+          "id": "bosque-nevado-chico",
+          "name": "Chico · 3 Pinos (12 cm / 130g)",
+          "price": 420,
+          "sku": "RC-LUZ-BOS-CH",
+          "dimensions": "12 cm diámetro · 130g",
+          "image": "assets/images/products/luz-bosque-nevado.png"
+        },
+        {
+          "id": "bosque-nevado-grande",
+          "name": "Grande · 5 Pinos (18 cm / 280g)",
+          "price": 580,
+          "sku": "RC-LUZ-BOS-GR",
+          "dimensions": "18 cm diámetro · 280g",
+          "image": "assets/images/products/luz-bosque-nevado.png"
+        }
+      ],
+      "customizable": {
+        "enabled": false,
+        "label": "",
+        "placeholder": "",
+        "maxLength": 0
+      },
+      "images": [
+        "assets/images/products/luz-bosque-nevado.png"
+      ],
+      "externalLinks": {
+        "stripePriceId": "price_luz_bosque",
+        "stripePaymentLink": "",
+        "shopifyProductUrl": "https://www.shopify.com/mx",
+        "etsyListingUrl": "https://www.etsy.com/mx"
+      },
+      "featured": true,
+      "bestseller": true
+    },
+    {
+      "id": "luz-pinos-marfil",
+      "slug": "pinos-de-marfil",
+      "title": "Pinos de Marfil",
+      "collectionId": "temporada-de-luz",
+      "category": "Arreglos en Base Artesanal",
+      "shortDescription": "Composición de pinos en tonos marfil sobre base artesanal ovalada.",
+      "description": "Inspirada en la serenidad del invierno, con tonos suaves y formas orgánicas que celebran la belleza de la naturaleza sobre una bandeja artesanal.",
+      "craftsmanshipDetails": {
+        "waxType": "100% Cera de Soya Natural",
+        "handmade": true,
+        "dimensions": "Bandeja ovalada artesanal",
+        "burnTime": "35 horas"
+      },
+      "allowedFragrances": ["pino-navideno", "vainilla-naranja", "manzana-canela"],
+      "variants": [
+        {
+          "id": "pinos-marfil-estandar",
+          "name": "Composición en Base Artesanal",
+          "price": 320,
+          "sku": "RC-LUZ-PIN1",
+          "dimensions": "Base ovalada",
+          "image": "assets/images/products/luz-pinos-marfil.png"
+        }
+      ],
+      "customizable": {
+        "enabled": false,
+        "label": "",
+        "placeholder": "",
+        "maxLength": 0
+      },
+      "images": [
+        "assets/images/products/luz-pinos-marfil.png"
+      ],
+      "externalLinks": {
+        "stripePriceId": "price_luz_pinos",
+        "stripePaymentLink": "",
+        "shopifyProductUrl": "https://www.shopify.com/mx",
+        "etsyListingUrl": "https://www.etsy.com/mx"
+      },
+      "featured": false,
+      "bestseller": false
+    },
+    {
+      "id": "luz-magia-diciembre",
+      "slug": "magia-de-diciembre",
+      "title": "Magia de Diciembre",
+      "collectionId": "temporada-de-luz",
+      "category": "Sets & Rituales",
+      "shortDescription": "Caja de regalo con Árbol de Navidad (Pino Navideño) acompañado de Muñeco de Jengibre o Reno.",
+      "description": "Una pequeña sorpresa para celebrar la temporada. En cada caja, un árbol navideño con aroma a Pino Navideño se acompaña de un personaje especial a elegir: Muñeco de Jengibre (aroma Galleta de Jengibre) o Reno (aroma Maderas).",
+      "craftsmanshipDetails": {
+        "waxType": "100% Cera de Soya Natural",
+        "handmade": true,
+        "dimensions": "Caja kraft con ventana y listón (2 velas)",
+        "burnTime": "25 horas"
+      },
+      "allowedFragrances": ["pino-navideno", "galleta-jengibre", "maderas"],
+      "variants": [
+        {
+          "id": "magia-pino-jengibre",
+          "name": "Árbol de Navidad + Muñeco de Jengibre",
+          "price": 170,
+          "sku": "RC-LUZ-MAG-JEN",
+          "dimensions": "Set 2 piezas",
+          "image": "assets/images/products/luz-magia-diciembre.png"
+        },
+        {
+          "id": "magia-pino-reno",
+          "name": "Árbol de Navidad + Reno (Aroma Maderas)",
+          "price": 170,
+          "sku": "RC-LUZ-MAG-REN",
+          "dimensions": "Set 2 piezas",
+          "image": "assets/images/products/luz-magia-diciembre.png"
+        }
+      ],
+      "customizable": {
+        "enabled": true,
+        "label": "Nombre en etiqueta de regalo",
+        "placeholder": "Ej. Para Sofía · Felices Fiestas",
+        "maxLength": 60
+      },
+      "images": [
+        "assets/images/products/luz-magia-diciembre.png"
+      ],
+      "externalLinks": {
+        "stripePriceId": "price_luz_magia",
+        "stripePaymentLink": "",
+        "shopifyProductUrl": "https://www.shopify.com/mx",
+        "etsyListingUrl": "https://www.etsy.com/mx"
+      },
+      "featured": false,
+      "bestseller": true
+    },
+    {
+      "id": "luz-destellos",
+      "slug": "destellos-detalle-navideno",
+      "title": "Destellos",
+      "collectionId": "temporada-de-luz",
+      "category": "Individuales & Recuerdos",
+      "shortDescription": "Pino escultórico en delicada caja de acetato con listón, ideal para regalar y compartir.",
+      "description": "Una pequeña luz para regalar y compartir. Presentada en una delicada caja transparente de acetato con listón dorado, pensada para iluminar intercambios, cenas y eventos especiales.",
+      "craftsmanshipDetails": {
+        "waxType": "100% Cera de Soya Natural",
+        "handmade": true,
+        "dimensions": "Caja individual de acetato con listón",
+        "burnTime": "12 horas"
+      },
+      "allowedFragrances": ["pino-navideno", "manzana-canela"],
+      "variants": [
+        {
+          "id": "destellos-individual",
+          "name": "Pino en Caja de Acetato",
+          "price": 60,
+          "sku": "RC-LUZ-DES1",
+          "dimensions": "Individual",
+          "image": "assets/images/products/luz-destellos.png"
+        }
+      ],
+      "customizable": {
+        "enabled": true,
+        "label": "Texto para etiqueta personalizada (ideal para eventos/intercambios)",
+        "placeholder": "Ej. Cena de Navidad 2026 · Gracias por venir",
+        "maxLength": 60
+      },
+      "images": [
+        "assets/images/products/luz-destellos.png"
+      ],
+      "externalLinks": {
+        "stripePriceId": "price_luz_destellos",
+        "stripePaymentLink": "",
+        "shopifyProductUrl": "https://www.shopify.com/mx",
+        "etsyListingUrl": "https://www.etsy.com/mx"
+      },
+      "featured": false,
+      "bestseller": true
+    },
+    {
+      "id": "luz-nuevos-comienzos",
+      "slug": "nuevos-comienzos-ritual-ano-nuevo",
+      "title": "Nuevos Comienzos · Set Ritual",
+      "collectionId": "temporada-de-luz",
+      "category": "Sets & Rituales",
+      "shortDescription": "Trilogía de velas intencionadas: Gratitud (Sándalo), Abundancia (Vainilla Naranja) y Nuevos Comienzos (Bergamota).",
+      "description": "A través de tres momentos —gratitud, abundancia y nuevos comienzos— este set invita a hacer una pausa, reflexionar y conectar con los deseos para el nuevo año. Un ritual para despedir un ciclo y recibir lo que está por venir con intención.",
+      "craftsmanshipDetails": {
+        "waxType": "100% Cera de Soya Natural",
+        "handmade": true,
+        "dimensions": "Estuche ritual con 3 velas aromáticas",
+        "burnTime": "65 horas totales"
+      },
+      "allowedFragrances": ["sandalo-bergamota", "vainilla-naranja"],
+      "variants": [
+        {
+          "id": "nuevos-comienzos-trilogia",
+          "name": "Trilogía Ritual (Gratitud + Abundancia + Nuevos Comienzos)",
+          "price": 350,
+          "sku": "RC-LUZ-NUE3",
+          "dimensions": "Set de 3 velas",
+          "image": "assets/images/products/luz-nuevos-comienzos.png"
+        }
+      ],
+      "customizable": {
+        "enabled": true,
+        "label": "Intención personalizada o nombre en la tarjeta del ritual",
+        "placeholder": "Ej. Que el 2027 ilumine cada uno de tus pasos, Ana",
+        "maxLength": 120
+      },
+      "images": [
+        "assets/images/products/luz-nuevos-comienzos.png"
+      ],
+      "externalLinks": {
+        "stripePriceId": "price_luz_nuevos_comienzos",
+        "stripePaymentLink": "",
+        "shopifyProductUrl": "https://www.shopify.com/mx",
+        "etsyListingUrl": "https://www.etsy.com/mx"
+      },
+      "featured": true,
+      "bestseller": true
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": "post-cuidado-cera-soya",
+      "slug": "ritual-primer-encendido-cera-de-soya",
+      "title": "El Ritual del Primer Encendido: Cómo cuidar tus velas de cera de soya",
+      "category": "Guía de Cuidado",
+      "publishedAt": "2026-11-15",
+      "readTime": "3 min lectura",
+      "excerpt": "La cera de soya 100% natural tiene memoria térmica. Descubre cómo lograr un quemado uniforme, limpio y prolongar la estela aromática de cada pieza.",
+      "content": "Nuestras velas están elaboradas a mano con cera de soya 100% vegetal, libre de parafinas y toxinas. En el primer encendido, permite que la piscina de cera derretida alcance los bordes del recipiente (aproximadamente 45 a 60 minutos) para evitar túneles. Antes de cada nuevo encendido, recorta el pabilo de algodón a 5 mm para mantener una llama serena y sin humo. Para nuestras velas escultóricas y florivelas, coloca siempre una bandeja resistente al calor debajo si decides encenderlas."
+    },
+    {
+      "id": "post-piramide-olfativa",
+      "slug": "arquitectura-de-aromas-raiz-y-cera",
+      "title": "Arquitectura Olfativa: Cómo evoluciona una vela de Raíz y Cera",
+      "category": "Cultura Olfativa",
+      "publishedAt": "2026-11-18",
+      "readTime": "4 min lectura",
+      "excerpt": "Al igual que la alta perfumería, cada aroma se compone de notas de salida, corazón y fondo que se despliegan gradualmente con el calor.",
+      "content": "Cuando destapas o enciendes por primera vez una vela de Raíz y Cera, percibes las Notas de Salida: acordes cítricos, herbales o frutales como la cáscara de naranja o los pétalos frescos de cempasúchil. A los veinte minutos, cuando la cera de soya alcanza su temperatura óptima, emergen las Notas de Corazón —canela de Ceilán, pino ciprés, masa brioche o jengibre—. Finalmente, al apagar la vela, permanecen en la habitación las Notas de Fondo: maderas nobles, sándalo, copal y vainilla."
+    },
+    {
+      "id": "post-regalos-personalizados",
+      "slug": "velas-personalizadas-eventos-y-rituales",
+      "title": "Luz a la Medida: Velas personalizadas para momentos inolvidables",
+      "category": "Atelier Personalizado",
+      "publishedAt": "2026-11-20",
+      "readTime": "3 min lectura",
+      "excerpt": "Desde la vela Memorias con tapa personalizada hasta recuerdos corporativos y bodas, cada pieza cuenta una historia única.",
+      "content": "En nuestro taller diseñamos piezas que guardan nombres, fechas e intenciones. Puedes personalizar directamente desde nuestra tienda en línea cualquiera de los artículos marcados con el sello 'Personalizable', o contactarnos para diseñar ediciones especiales por volumen para bodas, bautizos, altares familiares y regalos de fin de año."
+    }
+  ]
+}

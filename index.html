@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raíz y Cera | Raíces que Iluminan · Alta Cerería Botánica en Cera de Soya</title>
+  <meta name="description" content="Velas aromáticas y piezas escultóricas en cera de soya 100% natural hechas a mano. Colección Otoño, Día de Muertos y Temporada de Luz 2026." />
+
+  <!-- Google Fonts: Editorial Serif & Clean Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Main Luxury Storefront Stylesheet -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar (Candle Delirium Style) -->
+  <div class="top-announcement-bar" role="region" aria-label="Aviso promocional">
+    <div class="container">
+      <span id="announcement-text">ENVÍO GRATIS EN PEDIDOS DESDE $600 MXN · CERA DE SOYA 100% NATURAL HECHA A MANO</span>
+    </div>
+  </div>
+
+  <!-- Main Editorial Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand-logo-wrap" aria-label="Raíz y Cera - Inicio">
+        <span class="brand-logo-title js-brand-name">RAÍZ Y CERA</span>
+        <span class="brand-logo-tagline js-brand-tagline">RAÍCES QUE ILUMINAN</span>
+      </a>
+
+      <nav class="main-navigation" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#colecciones">Colecciones</a></li>
+          <li><a href="#catalogo">Catálogo Completo</a></li>
+          <li><a href="#aromas">Biblioteca Olfativa</a></li>
+          <li><a href="#catalogo" class="js-nav-customizable is-highlight">Personalizadas</a></li>
+          <li><a href="#pedidos-especiales">Eventos & B2B</a></li>
+          <li><a href="#editorial">Guía de Cuidado</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-utility-actions">
+        <a href="admin.html" class="btn-header-admin" title="Abrir Panel de Administración CMS">
+          <span>⚙</span> Panel Admin
+        </a>
+        <button type="button" class="btn-cart-trigger" id="header-cart-btn" aria-label="Abrir bolsa de compras">
+          <span>Bolsa</span>
+          <span class="cart-count-badge js-cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- Hero Showcase Carousel -->
+    <section class="hero-section" aria-label="Colecciones destacadas">
+      <div id="hero-carousel-track" class="hero-track">
+        <!-- Rendered dynamically by StorefrontAppController -->
+      </div>
+      <button type="button" class="hero-nav-arrow hero-prev-btn" id="hero-prev-btn" aria-label="Diapositiva anterior">‹</button>
+      <button type="button" class="hero-nav-arrow hero-next-btn" id="hero-next-btn" aria-label="Siguiente diapositiva">›</button>
+      <div class="hero-dots-container" id="hero-carousel-dots"></div>
+    </section>
+
+    <!-- Seasonal Collections Grid -->
+    <section id="colecciones" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pretitle">Nuestras Ediciones</span>
+          <h2 class="section-title">Colecciones de Autor</h2>
+          <p class="section-desc">Piezas de arte efímero moldeadas en cera de soya botánica con esencias que rinden tributo a nuestras raíces y a cada estación del año.</p>
+        </div>
+        <div class="collections-grid" id="collections-grid">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Faceted Catalog & Product Grid (Candle Delirium & Yankee Candle style) -->
+    <section id="catalogo" class="section-padding catalog-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pretitle">Artesanía en Cera de Soya</span>
+          <h2 class="section-title">Catálogo Completo</h2>
+          <p class="section-desc">Filtra por colección, notas olfativas o formato. Elige tu aroma favorito en cada pieza y personaliza tapas y etiquetas para regalos memorables.</p>
+        </div>
+
+        <!-- Faceted Filter Controls -->
+        <div class="catalog-filter-bar">
+          <div class="filter-pills-row" id="filter-collection-pills">
+            <!-- Populated dynamically -->
+          </div>
+
+          <div class="filter-controls-grid">
+            <div class="search-box">
+              <input type="search" id="catalog-search-input" placeholder="Buscar por nombre, nota olfativa (ej. canela, cempasúchil, pino)..." />
+            </div>
+            <div class="select-box">
+              <select id="filter-category-select">
+                <option value="all">Todos los Formatos</option>
+              </select>
+            </div>
+            <div class="select-box">
+              <select id="filter-family-select">
+                <option value="all">Todas las Familias Olfativas</option>
+              </select>
+            </div>
+            <div class="select-box">
+              <select id="filter-fragrance-select">
+                <option value="all">Todos los Aromas</option>
+              </select>
+            </div>
+            <div class="select-box">
+              <select id="filter-sort-select">
+                <option value="featured">Destacados & Bestsellers</option>
+                <option value="price-asc">Precio: Menor a Mayor</option>
+                <option value="price-desc">Precio: Mayor a Menor</option>
+                <option value="name-asc">Nombre (A - Z)</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+            <label class="filter-toggle-wrap">
+              <input type="checkbox" id="filter-customizable-toggle" />
+              <span>✦ Mostrar solo creaciones con personalización interactiva</span>
+            </label>
+            <button type="button" class="btn-link" id="btn-reset-all-filters">Limpiar Filtros</button>
+          </div>
+        </div>
+
+        <div class="catalog-meta-row">
+          <span id="catalog-results-count">Cargando creaciones...</span>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="catalog-products-grid">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Olfactory Library & Fragrance Pyramid Explorer -->
+    <section id="aromas" class="section-padding fragrance-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pretitle">Arquitectura Olfativa</span>
+          <h2 class="section-title">Biblioteca de Aromas & Pirámide</h2>
+          <p class="section-desc">Cada una de nuestras velas libera un acorde armonioso de notas de salida, corazón y fondo formuladas con esencias libres de ftalatos.</p>
+        </div>
+        <div class="fragrance-explorer-grid" id="fragrance-explorer-grid">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom Orders Concierge (B2B, Weddings & Special Events) -->
+    <section id="pedidos-especiales" class="section-padding custom-orders-section">
+      <div class="container">
+        <div class="custom-orders-grid">
+          <div class="custom-orders-text">
+            <span class="section-pretitle" style="color: var(--color-gold-light);">Atelier a la Medida</span>
+            <h2 id="custom-orders-title">¿Buscas algo especial para tu evento o regalo corporativo?</h2>
+            <p id="custom-orders-subtitle">Creamos ediciones personalizadas en cera de soya con etiquetas a medida, selección de notas olfativas y empaque artesanal.</p>
+            <div class="custom-orders-pillars">
+              <div class="pillar-item">
+                <h4>Bodas & Celebraciones</h4>
+                <p>Recuerdos elegantes que tus invitados conservarán y encenderán con afecto.</p>
+              </div>
+              <div class="pillar-item">
+                <h4>Regalos Corporativos</h4>
+                <p>Kits navideños, rituales de fin de año y detalles de agradecimiento con tu identidad.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="custom-order-card">
+            <h3>Cotización Directa</h3>
+            <p>Envíanos los detalles de tu evento y te respondemos de inmediato vía WhatsApp.</p>
+            <form id="custom-order-quote-form">
+              <div class="form-group-custom">
+                <label for="quote-name">Nombre / Organización</label>
+                <input type="text" id="quote-name" required placeholder="Tu nombre completo..." />
+              </div>
+              <div class="form-group-custom">
+                <label for="quote-event-type">Tipo de Ocasión</label>
+                <select id="quote-event-type">
+                  <option value="Boda o Aniversario">Boda o Aniversario</option>
+                  <option value="Regalos Corporativos de Fin de Año">Regalos Corporativos de Fin de Año</option>
+                  <option value="Bautizo o Comunión">Bautizo o Primera Comunión</option>
+                  <option value="Altar Familiar / Día de Muertos">Altar Familiar / Día de Muertos</option>
+                  <option value="Edición Especial Personalizada">Edición Especial Personalizada</option>
+                </select>
+              </div>
+              <div class="form-group-custom">
+                <label for="quote-quantity">Cantidad Estimada de Piezas</label>
+                <input type="number" id="quote-quantity" value="25" min="5" max="1000" />
+              </div>
+              <div class="form-group-custom">
+                <label for="quote-details">Idea, Aromas o Mensaje Deseado</label>
+                <textarea id="quote-details" rows="3" placeholder="Cuéntanos fecha del evento, colores preferidos o dedicatoria..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                Solicitar Cotización por WhatsApp 💬
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial Blog & Candle Care Guide -->
+    <section id="editorial" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pretitle">Cultura & Cuidado</span>
+          <h2 class="section-title">El Arte de la Cera de Soya</h2>
+          <p class="section-desc">Aprende a cuidar el pabilo de tus velas, conoce los beneficios de la cera vegetal libre de parafinas y descubre cómo disfrutar al máximo tus aromas.</p>
+        </div>
+        <div class="editorial-grid" id="editorial-posts-grid">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 class="js-brand-name">RAÍZ Y CERA</h3>
+          <p class="js-brand-tagline">RAÍCES QUE ILUMINAN</p>
+          <p style="margin-top: 1rem;">Alta cerería botánica elaborada a mano en México con 100% cera de soya natural, pabilos de algodón puro y esencias artesanales de autor.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Colecciones</h4>
+          <ul>
+            <li><a href="#catalogo" class="js-filter-collection" data-collection="temporada-de-luz">Temporada de Luz 2026</a></li>
+            <li><a href="#catalogo" class="js-filter-collection" data-collection="coleccion-otono">Colección Otoño 2026</a></li>
+            <li><a href="#catalogo" class="js-filter-collection" data-collection="dia-de-muertos">Día de Muertos 2026</a></li>
+            <li><a href="#catalogo" class="js-nav-customizable">Velas Personalizadas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Soporte & Envíos</h4>
+          <ul>
+            <li><a href="#pedidos-especiales">Pedidos para Eventos y Bodas</a></li>
+            <li><a href="#editorial">Guía de Primer Encendido</a></li>
+            <li><span>Envío gratis desde $600 MXN</span></li>
+            <li><a href="admin.html">Acceso a Panel CMS</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atelier & Pedidos</h4>
+          <ul>
+            <li><strong>WhatsApp:</strong> <span class="js-whatsapp-display">55 2702 6347</span></li>
+            <li><strong>Instagram:</strong> <a href="https://www.instagram.com/raizycera" target="_blank" rel="noopener" class="js-instagram-handle">@raizycera</a></li>
+            <li><strong>Envíos:</strong> Toda la República Mexicana</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 <strong class="js-brand-name">Raíz y Cera</strong>. Todos los derechos reservados.</span>
+        <span>Plataforma E-Commerce & CMS Autocontenido · Conexión Stripe, Shopify, Etsy & WhatsApp</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Out Cart Drawer -->
+  <div class="drawer-backdrop" id="cart-drawer-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" hidden aria-label="Bolsa de compras">
+    <div class="cart-drawer-header">
+      <h3>Tu Bolsa (<span class="js-cart-count">0</span>)</h3>
+      <button type="button" class="drawer-close-btn" id="cart-drawer-close" aria-label="Cerrar bolsa">&times;</button>
+    </div>
+
+    <!-- Free Shipping Progress Tracker -->
+    <div class="cart-shipping-banner">
+      <p id="cart-shipping-message">Cargando regla de envío...</p>
+      <div class="progress-track">
+        <div class="progress-fill" id="cart-shipping-progress-bar" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Line Items -->
+    <div class="cart-items-container" id="cart-items-list">
+      <!-- Populated dynamically -->
+    </div>
+
+    <!-- Cart Footer & Omnichannel Checkout -->
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <div class="cart-totals-summary">
+        <div class="total-row">
+          <span>Subtotal:</span>
+          <strong id="cart-subtotal-amount">$0 MXN</strong>
+        </div>
+        <div class="total-row">
+          <span>Envío Nacional:</span>
+          <span id="cart-shipping-amount">Calculando...</span>
+        </div>
+        <div class="total-row grand-total">
+          <span>Total Estimado:</span>
+          <strong id="cart-total-amount">$0 MXN</strong>
+        </div>
+      </div>
+
+      <!-- Customer Fast-Order Details -->
+      <div style="margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.4rem;">
+        <input type="text" id="checkout-customer-name" placeholder="Tu nombre para el envío / pedido..." style="padding: 0.5rem; font-size: 0.8rem; border: 1px solid var(--color-border); border-radius: 4px;" />
+        <input type="tel" id="checkout-customer-phone" placeholder="WhatsApp o teléfono de contacto..." style="padding: 0.5rem; font-size: 0.8rem; border: 1px solid var(--color-border); border-radius: 4px;" />
+        <input type="text" id="checkout-customer-city" placeholder="Ciudad o dirección de entrega..." style="padding: 0.5rem; font-size: 0.8rem; border: 1px solid var(--color-border); border-radius: 4px;" />
+      </div>
+
+      <!-- 3 Checkout Channels -->
+      <div class="cart-checkout-actions">
+        <button type="button" class="btn btn-checkout-stripe btn-lg" id="btn-checkout-stripe">
+          💳 Pagar con Stripe (Tarjeta / Débito)
+        </button>
+        <button type="button" class="btn btn-checkout-wa btn-lg" id="btn-checkout-whatsapp">
+          💬 Confirmar y Pedir por WhatsApp
+        </button>
+        <div class="cart-marketplaces-row">
+          <button type="button" class="btn btn-checkout-shopify btn-sm" id="btn-checkout-shopify">
+            🛍️ Ver en Shopify
+          </button>
+          <button type="button" class="btn btn-checkout-etsy btn-sm" id="btn-checkout-etsy">
+            🧡 Ver en Etsy
+          </button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Product Detail & Interactive Customization Modal -->
+  <div class="modal-backdrop" id="product-detail-modal" hidden>
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" id="product-modal-close" aria-label="Cerrar ventana">&times;</button>
+      <div id="product-modal-body">
+        <!-- Rendered dynamically by StorefrontAppController -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Status & Stripe Sandbox Modal -->
+  <div class="modal-backdrop" id="checkout-status-modal" hidden>
+    <div class="modal-dialog" style="max-width: 580px;">
+      <button type="button" class="modal-close-btn" id="checkout-status-close" aria-label="Cerrar ventana">&times;</button>
+      <div id="checkout-status-body">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Storefront Application Script (OOP ES Module) -->
+  <script type="module" src="src/ui/storefront_controller.js"></script>
+</body>
+</html>
