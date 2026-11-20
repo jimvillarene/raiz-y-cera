@@ -33,6 +33,10 @@ Version History:
   padding: 0;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 body.admin-body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   background-color: var(--wp-admin-bg);
@@ -379,6 +383,10 @@ body.admin-body {
   align-items: center;
   justify-content: center;
   padding: 2rem;
+}
+
+.admin-modal-backdrop[hidden] {
+  display: none !important;
 }
 
 .admin-modal-dialog {

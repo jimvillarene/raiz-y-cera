@@ -636,6 +636,7 @@ export class StorefrontAppController {
 
     this._bindProductModalEvents(product);
     modal.hidden = false;
+    modal.style.display = "flex";
     document.body.classList.add("modal-open");
   }
 
@@ -799,7 +800,10 @@ export class StorefrontAppController {
    */
   closeProductModal() {
     const modal = document.getElementById("product-detail-modal");
-    if (modal) modal.hidden = true;
+    if (modal) {
+      modal.hidden = true;
+      modal.style.display = "none";
+    }
     document.body.classList.remove("modal-open");
   }
 
@@ -815,6 +819,8 @@ export class StorefrontAppController {
     const shouldOpen = typeof forceOpen === "boolean" ? forceOpen : drawer.hidden;
     drawer.hidden = !shouldOpen;
     backdrop.hidden = !shouldOpen;
+    drawer.style.display = shouldOpen ? "flex" : "none";
+    backdrop.style.display = shouldOpen ? "block" : "none";
     document.body.classList.toggle("drawer-open", shouldOpen);
   }
 
@@ -993,6 +999,7 @@ export class StorefrontAppController {
     `;
 
     modal.hidden = false;
+    modal.style.display = "flex";
 
     document.getElementById("btn-confirm-stripe-demo")?.addEventListener("click", () => {
       content.innerHTML = `
@@ -1009,6 +1016,7 @@ export class StorefrontAppController {
       document.getElementById("btn-finish-stripe-order")?.addEventListener("click", () => {
         this._cartService.clear();
         modal.hidden = true;
+        modal.style.display = "none";
         this.toggleCartDrawer(false);
       });
     });
@@ -1038,6 +1046,7 @@ export class StorefrontAppController {
       </div>
     `;
     modal.hidden = false;
+    modal.style.display = "flex";
   }
 
   /**
@@ -1176,7 +1185,16 @@ export class StorefrontAppController {
 
     document.getElementById("checkout-status-close")?.addEventListener("click", () => {
       const modal = document.getElementById("checkout-status-modal");
-      if (modal) modal.hidden = true;
+      if (modal) {
+        modal.hidden = true;
+        modal.style.display = "none";
+      }
+    });
+    document.getElementById("checkout-status-modal")?.addEventListener("click", (e) => {
+      if (e.target.id === "checkout-status-modal") {
+        e.target.hidden = true;
+        e.target.style.display = "none";
+      }
     });
 
     // Cart Drawer open/close & item actions
